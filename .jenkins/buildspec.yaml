@@ -1,0 +1,25 @@
+build:
+  resolveDependency: true
+  chnageVersionNumber: false
+  buildProject: true
+  runUnitTests: true
+  runSonarQubeTests: false
+  packageCode: true
+  uploadToRepository: true
+  buildAsContainer: true
+  runPostBuildActions: false
+
+project:
+  name: voting-app
+  builderVersion: "python3"
+  preferedRegistryIndex: 0
+
+registry:
+  - id: "dev-nexus"
+    hostedRepository: "python-hosted"
+    groupRepository: "python-group/simple"
+    hostToArtifact: true
+
+containerConfig:
+  - name: voting-app
+    dockerFilePath: docker/Dockerfile
