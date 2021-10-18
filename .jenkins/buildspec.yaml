@@ -8,6 +8,7 @@ build:
   uploadToRepository: true
   buildAsContainer: true
   runPostBuildActions: false
+  deploy: true
 
 project:
   name: voting-app
