@@ -23,3 +23,8 @@ registry:
 containerConfig:
   - name: voting-app
     dockerFilePath: docker/Dockerfile
+
+deploy:
+  type: argocd
+  repo: git@github.com:yigitbasalma/argocd.git
+  path: vote-app-frontend
